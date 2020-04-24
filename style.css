@@ -1,0 +1,531 @@
+@charset "UTF-8";
+body {
+  font-family: 'Kosugi Maru', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.anchor {
+  display: block;
+  padding-top: 70px;
+  margin-top: -70px;
+}
+
+.fadeIn {
+  opacity: 0;
+  -webkit-transform: translate(0, 50px);
+          transform: translate(0, 50px);
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.scrollIn {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+#topPage {
+  position: absolute;
+  top: 0;
+}
+
+.tel {
+  display: none;
+}
+
+header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.menuTitle {
+  margin-left: 20px;
+}
+
+.menuTitle h1 {
+  font-size: 20px;
+}
+
+.menuTitle i {
+  color: #f38a00;
+}
+
+.menuSites, .lineIcon, .topApplication {
+  display: none;
+}
+
+.menu-trigger {
+  display: inline-block;
+  position: relative;
+  width: 36px;
+  height: 28px;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.menu-trigger span {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  width: 80%;
+  height: 4px;
+  background-color: #000;
+  -webkit-transition: all .5s .2s;
+  transition: all .5s .2s;
+  border-radius: 8px;
+}
+
+.menu-trigger.active span {
+  background-color: black;
+}
+
+.menu-trigger span:nth-of-type(1) {
+  top: 2px;
+}
+
+.menu-trigger.active span:nth-of-type(1) {
+  -webkit-transform: translateY(8.5px) rotate(45deg);
+          transform: translateY(8.5px) rotate(45deg);
+}
+
+.menu-trigger span:nth-of-type(2) {
+  top: 11px;
+  height: 4px;
+}
+
+.menu-trigger.active span:nth-of-type(2) {
+  opacity: 0;
+  -webkit-transform: translateX(-15px);
+          transform: translateX(-15px);
+}
+
+.menu-trigger span:nth-of-type(3) {
+  bottom: 4px;
+  height: 4px;
+}
+
+.menu-trigger.active span:nth-of-type(3) {
+  -webkit-transform: translateY(-8.5px) rotate(-45deg);
+          transform: translateY(-8.5px) rotate(-45deg);
+  height: 4px;
+}
+
+nav {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  display: none;
+  position: fixed;
+  color: black;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+nav ul {
+  padding: 20px 0;
+  margin-top: 5%;
+}
+
+nav ul h1 {
+  font-size: 28px;
+  margin-bottom: 2rem;
+}
+
+nav ul li {
+  text-align: center;
+  font-size: 16px;
+  padding: 6px 0;
+  list-style: none;
+  -webkit-filter: none !important;
+          filter: none !important;
+}
+
+nav ul li::before {
+  content: " ";
+  color: green;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: black;
+}
+
+nav ul a:hover {
+  text-decoration: underline;
+}
+
+nav ul .orange {
+  border: 1px solid #ffb85a;
+  padding: 2px 6px;
+  color: #ffb85a;
+}
+
+nav ul .orange:hover {
+  background-color: #ffb85a;
+  text-decoration: none;
+  color: #fff;
+}
+
+nav ul .greenWords {
+  border: 1px solid #1CEC05;
+  padding: 2px 6px;
+  color: #1CEC05;
+}
+
+nav ul .greenWords:hover {
+  background-color: #1CEC05;
+  text-decoration: none;
+  color: #fff;
+}
+
+nav ul .blackWords {
+  border: 1px solid black;
+  padding: 2px 6px;
+  color: black;
+}
+
+nav ul .blackWords:hover {
+  background-color: black;
+  text-decoration: none;
+  color: #fff;
+}
+
+.main {
+  margin-top: 60px;
+  text-align: center;
+  background-image: url(./未来デザイン画像/mainCircleVer2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+
+.buttonWrapper {
+  margin: 3rem;
+  text-align: center;
+}
+
+.button {
+  text-align: center;
+  text-decoration: none;
+  color: #1CEC05;
+  color: #fff;
+  padding: 10px 40px;
+  background-color: #1ce293;
+  font-size: 20px;
+  border-radius: 8px;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.button:hover {
+  background-color: #16b575;
+}
+
+.about {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.about .aboutImg img {
+  width: 80%;
+}
+
+.about .aboutExpl {
+  width: 80%;
+  margin: auto;
+}
+
+.feature {
+  background-color: #ffe4c0;
+  width: 100%;
+  text-align: center;
+  margin: 2rem 0 0 0;
+  padding: 3rem 0;
+}
+
+.feature .features {
+  background-color: #fff;
+  width: 80%;
+  margin: 1rem auto;
+  padding: .3rem;
+  border: 4px solid #ffb85a;
+  border-radius: 200px;
+}
+
+.feature .features h3 {
+  color: #f38a00;
+  border-bottom: 3px dotted #ffb85a;
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.feature .features .image {
+  color: #ffb85a;
+  font-size: 30px;
+}
+
+.feature .features p {
+  width: 80%;
+  margin: 1rem auto;
+}
+
+.flow {
+  text-align: center;
+  padding: 2rem 0 0 0;
+  background-image: url(./未来デザイン画像/meeting.jpg);
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+.flow .flowTitle {
+  color: #fff;
+}
+
+.flow .steps {
+  margin-bottom: 2rem;
+}
+
+.flow .step {
+  background-color: #fff;
+  width: 80%;
+  margin: 1rem auto;
+  padding: .3rem 0 1rem 0;
+  border-radius: 10px;
+}
+
+.flow .step img {
+  width: 50%;
+  height: 100%;
+}
+
+.flow .step .stepTitle {
+  background-color: #ffb85a;
+  width: 80%;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.flow .step .stepExpl {
+  width: 80%;
+  margin: auto;
+}
+
+.flow .step .stepButton a {
+  border: 1px solid black;
+  text-decoration: none;
+  color: black;
+  padding: 3px 6px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.flow .step .stepButton a:hover {
+  color: #fff;
+  background: black;
+}
+
+.flow .green {
+  background-color: #1CEC05;
+  width: 100%;
+  text-align: center;
+  padding: 1px 0;
+}
+
+.line {
+  margin: 2rem 0;
+}
+
+.line .lineTitle {
+  text-align: center;
+}
+
+.line .lineExpl, .line .lineButton {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+
+.line .lineButton {
+  margin-bottom: 1.5rem;
+}
+
+.line .lineButton a {
+  border: 1px solid #1CEC05;
+  font-size: 20px;
+  text-decoration: none;
+  color: #1CEC05;
+  padding: .5rem 1rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.line .lineButton a:hover {
+  background-color: #1CEC05;
+  color: #fff;
+}
+
+.line .lineFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.line .lineFlex .lineSteps {
+  margin-left: 1rem;
+}
+
+.line .lineFlex .lineImg {
+  margin: 1rem;
+}
+
+.line .lineFlex .lineImg img {
+  width: 120px;
+}
+
+.question .questionTitle {
+  text-align: center;
+}
+
+.question .QandA {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid #b3b3b3;
+}
+
+.question .QandA .questions {
+  margin: 0 0 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.question .QandA .questions:hover {
+  cursor: pointer;
+}
+
+.question .QandA .questions h4 {
+  margin: 0;
+  padding: .5rem 0;
+}
+
+.question .QandA .questions i {
+  font-size: 20px;
+  margin-right: 1rem;
+  margin-top: .7rem;
+}
+
+.question .QandA .answers {
+  display: none;
+  margin-left: 1rem;
+}
+
+.question .QandA .answers h4 {
+  margin: 0;
+  padding-bottom: .5rem;
+}
+
+.question .QandA .answers h4 span {
+  color: #f38a00;
+}
+
+.warningWrapper {
+  padding-top: 3rem;
+}
+
+.warning {
+  text-align: center;
+  margin: 2rem 1rem;
+  padding: 0 0 2rem 0;
+  border: 2px solid #ffb85a;
+}
+
+.warning .cautionExpl {
+  width: 85%;
+  margin: auto;
+}
+
+.warning .restrictionExpl {
+  width: 85%;
+  margin: auto;
+  text-align: left;
+}
+
+.phoneNumber {
+  text-align: center;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+  font-size: 10px;
+}
+
+footer .overView {
+  width: 33%;
+  background-color: #ffb85a;
+  border-radius: 10px;
+}
+
+footer .application {
+  width: 34%;
+  background-color: #1CEC05;
+  border-radius: 10px;
+}
+
+footer .application a {
+  color: #fff;
+}
+
+footer .sites {
+  width: 33%;
+  background-color: #fff;
+  border: 1px solid #b3b3b3;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=style.css.map */
